@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+
+* {
+    font-family: "Montserrat";
+}
+
+.top-page{
+    background: url("/Images/background.webp");
+    background-size: cover;
+    height: 80vh;
+    padding: 25px;
+}
+
+body {
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    display: flex;
+    align-items:center;
+    background-color: #74b3ce;
+}
+
+header img {
+    width: 120px;
+}
+
+/* Page d'accueil */
+
+.landing-page {
+    padding: 20px 50px;
+}
+
+.big-title {
+    color: white;
+    font-size: 50px;
+    font-family: "Abril FatFace";
+    font-weight: 100;
+    padding: 20px 50px;
+}
+
+.scroll-down {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 120px;
+}
+
+/* Menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between; 
+    list-style: none;
+    width: 1000px;
+    margin-left: 50px;
+    border-spacing: 50px;
+}
+
+
+nav.nav li {
+    color: white;
+}
+
+/* Footer */ 
+
+footer {
+    display: flex;
+    position: relative;
+    align-items:center;
+    background-color: #74b3ce;
+    width: 100%;
+}
+
+nav.nav-bottom {
+    display: flex;
+    justify-content: space-between; 
+    list-style: none;
+    width: 1000px;
+    margin-left: 200px;
+    border-spacing: 50px;
+    font-size: 20px;
+    background-size: cover;
+}
+
+
+/* Services */
+
+.services {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+/* Best-sellers */
+
+.section-title {
+    font-size: 50px;
+    font-family: "Abril FatFace", cursive;
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    background-color: #74b3ce;
+    width: 50px;
+    height: 7px;
+    bottom: 0;
+}
+
+.best-sellers {
+    background-color: #74b3ce;
+    min-height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.best-items {
+    margin: 100px;
+}
+
+.jewel-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.no-grid {
+    min-width: 350px;
+    height: 350px;
+    flex: 1;
+}
+
+.jewel1 {
+    background-image: url(../Images/PlatiniumBracelet.jpg);
+}
+
+.jewel2 {
+    background-image: url(../Images/PlatiniumEarring.jpg);
+}
+
+.jewel3 {
+    background-image: url(../Images/PlatiniumNecklace.jpg);
+}
+
+.jewel4 {
+    background-image: url(../Images/PlatiniumRing.jpg);
+}
+
+.jewel-details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #FFFFFFDF;
+    padding: 5px 20px;
+}
+
+.jewel-name {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 2px;
+}
+
+.jewel-price {
+    color: #74b3ce;
+    font-weight: 800;
+    line-height: 2px;
+}
+
+/* Jewel List */
+
+.table-design {
+    color: black;
+    border: 1px solid;
+    width: 50%;
+    height: 70px;
+    text-align: center;
+}
+
+img {
+    max-width: 350px;
+    max-height: 350px;
+}
