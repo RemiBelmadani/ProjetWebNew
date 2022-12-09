@@ -3,18 +3,42 @@
 <!-- display in a secure way: every active content is ESCAPED (as HTML entities...) -->
 <!-- Security problems: SQL Injection, XSS Cross Site Scripting  -->
 <%- include("partials/header") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ShowTitle">
+        <h1>Single Jewel Datasheet</h1>
+    </div>
+    <div class="ShowPage">
+        
 
-<h1>Single Jewel Datasheet</h1>
+        <div class="Backtolist">
+            <p><a href='/Jewels/list'>Back to the list</a></p>
+        </div>
 
-<p><a href='/Jewels/list'>Back to the list</a></p>
+        <div class="ShowTable">
+            <table class="table table-striped table-bordered table-hover">
+                <tr><td>ID:</td><td> <%= OneJewel.Jewel_ID %> </td></tr>
+                <tr><td>Name:</td><td> <%= OneJewel.Jewel_name %> </td></tr>
+                <tr><td>Price:</td><td> <%= OneJewel.price %> </td></tr>
+                <tr><td>Size:</td><td> <%= OneJewel.size %> </td></tr>
+                <tr><td>Category:</td><td> <%= OneJewel.Jewel_category%> </td></tr>
+            </table> 
+        </div>
+    
+        <div class="ShowImage">
+            <img src="/Images/<%= OneJewel.Images%>">
+        </div>
+    </div>   
+</body>
+</html>
 
-<table class="table table-striped table-bordered table-hover">
-    <tr><td>ID:</td><td> <%= OneJewel.Jewel_ID %> </td></tr>
-    <tr><td>Name:</td><td> <%= OneJewel.Jewel_name %> </td></tr>
-    <tr><td>Price:</td><td> <%= OneJewel.price %> </td></tr>
-    <tr><td>Size:</td><td> <%= OneJewel.size %> </td></tr>
-    <tr><td>Category:</td><td> <%= OneJewel.Jewel_category%> </td></tr>
-</table>
 
 <%- include("partials/footer") %>
 
