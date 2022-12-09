@@ -176,11 +176,27 @@ nav.nav-bottom {
 /* Jewel List */
 
 .table-design {
-    color: black;
-    border: 1px solid;
+    color:black;
+    border: 2px solid;
     width: 50%;
     height: 70px;
     text-align: center;
+    margin-left: 100px;
+
+}
+
+.AddJewel {
+    color:black;
+    border: 2px solid;
+    width: 81.2%;
+    height: 70px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.JewelPage {
+    display: flex;
+    margin-left:10px;
 }
 
 img {

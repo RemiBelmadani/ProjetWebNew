@@ -16,35 +16,70 @@
     <h1>List of Jewels</h1>
 <% if (flashMessage) { %>
     <p style='color:red'><%= flashMessage %></p>
-<% } %>
-
-<p><a href='/Jewels/edit/0'>Add a new jewel</a></p>
-
-<table class="table-design">
-    <tr>
-        <th>Images</th>
-        <th>Model</th>
-        <th>Price</th>
-        <th>Size</th>
-        <th>Category</th>
-        <th>Show</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
+<% } %>        
+<div class="JewelPage">
+    <div class="tableau1">
+        <section class="price">
+            <h1>
+                Price
+            </h1>
+            <h4>
+                <br/><a href="/50">50 $</a></br>
+                <br/><a href="/80">80 $</a></br>
+                <br/><a href="/100">100 $</a></br> 
+                <br/><a href="/1000">1000 $</a></br> 
+            </h4>
+        </section>
+        <section class="material">
+            <h1>
+                Materials
+            </h1>
+            <h3>
+                <br/><a href="/silver">Silver</a></br>
+                <br/><a href="/gold">Gold</a></br>
+                <br/><a href="/platinium">Platinium</a></br> 
+                <br/><a href="/biodegradable">Biodegradable</a></br> 
+            </h3>
+        </section>
+    </div>
+    <div class="tableau2">
     
-<% for (var c of Jewels) { %>
-    <tr>
-        <td><img src="/Images/<%= c.Images %>"></td>
-        <td><%= c.Jewel_name %></td>
-        <td><%= c.price %></td>
-        <td><%= c.size %></td>
-        <td><%= c.Jewel_category %></td>
-        <td><a href='/Jewels/show/<%= c.Jewel_ID %>'>Show</a></td>
-        <td><a href='/Jewels/edit/<%= c.Jewel_ID %>'>Edit</a></td>
-        <td><a href='/Jewels/del/<%= c.Jewel_ID %>'>Delete</a></td>
-    </tr>
-<% } %>
-</table>
+    <div class="AddJewel">
+        <p><a href='/Jewels/edit/0'>Add a new jewel</a></p>
+    </div>       
+
+    <table class="table-design">    
+
+        <tr>
+            <th>Images</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Category</th>
+            <th>Show</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    
+    <% for (var c of Jewels) { %>
+        <tr>
+            <td><img src="/Images/<%= c.Images %>"></td>
+            <td><%= c.Jewel_name %></td>
+            <td><%= c.price %></td>
+            <td><%= c.size %></td>
+            <td><%= c.Jewel_category %></td>
+            <td><a href='/Jewels/show/<%= c.Jewel_ID %>'>Show</a></td>
+            <td><a href='/Jewels/edit/<%= c.Jewel_ID %>'>Edit</a></td>
+            <td><a href='/Jewels/del/<%= c.Jewel_ID %>'>Delete</a></td>
+        </tr>
+    <% } %>
+    </table>
+    </div>   
+</div>
+    
+    
+
+
 </body>
 </html>
 
