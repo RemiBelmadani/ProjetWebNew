@@ -17,10 +17,14 @@
             <form method="post" action="/auth/login">
                 <input name="username" type="username" class="form-control" id="username" placeholder="Username" required>
                 <input name="userpass" type="password" class="form-control" id="password" placeholder="Password" required>
-                <button type="submit" class="btn btn-dark btn-block">Login</button>
+                <button type="submit" class="LoginButton">Login</button>
             </form>
         </div>
         <div class="LogBalise">
+            <button type="submit" class="LogoutButton">Log out</button>
+            <button type="submit" class="UserButton">Users Only</button>
+            <button type="submit" class="AdminButton">Admin Only</button>
+            <button type="submit" class="protectedButton">User level dependant auto redirect</button>
             <a href="/auth/logout">LOG OUT</a> <br/>
             <a href="/auth/user">USERS ONLY</a> <br/>
             <a href="/auth/admin">ADMINS ONLY</a> <br/>
