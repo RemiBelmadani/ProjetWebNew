@@ -28,7 +28,7 @@ header img {
 }
 
 /* Page d'accueil */
-
+                                                     
 .landing-page {
     padding: 20px 50px;
 }
@@ -90,10 +90,11 @@ nav.nav-bottom {
 
 .services {
     display: flex;
-    width: 500px;
+    width: 90%;
     height: 100px;
     justify-content: space-between;
     margin-left: 50px;
+    position: absolute;
 }
 
 /* Best-sellers */
@@ -230,4 +231,13 @@ img {
 
 .ShowImage {
     margin-left: 50px;
+}
+
+/* Authentification Page */
+
+.LogPage {
+    margin-left: 500px;
+    border: 1px solid black;
+    width: 30%;
+    text-align: center;
 }

@@ -74,31 +74,15 @@ auth.initialization(app);
 
 // app.use(routeBase, callback);
 app.use("/static", express.static(__dirname + '/static'));
-//app.use("/hello", require("./controllers/hello.route"));
 app.use("/Jewels", require("./controllers/jewelsControls"));
 app.use("/Users", require("./controllers/usersControllers"));
 app.use("/Images", require("./controllers/jewelsControls"));
-
-
-app.use(express.static(__dirname + '/public'));
+app.use("/auth", require("./controllers/usersControllers"));
 app.use('/css', express.static(__dirname + 'public/css'));
 
 
-app.use(express.static('files'));
-
-app.use('/static', express.static('public'));
-app.use('/static', express.static(__dirname + '/public'));
-
-
-app.use(express.static('files'));
 app.use(express.static(__dirname + '/public'));
-app.use('/css', express.static(__dirname + 'public'));
-app.use('/static', express.static('public'));
-app.use('/static', express.static(__dirname + '/public'));
-app.use(express.static('files'));
-app.get('', (req, res) => {
-    res.render('home')
-});
+
 
 app.get('/about', (req, res) => {
     res.render(__dirname + '/views/about.ejs')
