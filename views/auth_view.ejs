@@ -21,14 +21,10 @@
             </form>
         </div>
         <div class="LogBalise">
-            <button type="submit" class="LogoutButton">Log out</button>
-            <button type="submit" class="UserButton">Users Only</button>
-            <button type="submit" class="AdminButton">Admin Only</button>
-            <button type="submit" class="protectedButton">User level dependant auto redirect</button>
-            <a href="/auth/logout">LOG OUT</a> <br/>
-            <a href="/auth/user">USERS ONLY</a> <br/>
-            <a href="/auth/admin">ADMINS ONLY</a> <br/>
-            <a href="/auth/protected">USER LEVEL DEPENDENT AUTO REDIRECT</a> <br/>
+            <button type="submit" onclick="window.location.href='/auth/logout'"  class="LogoutButton">Log out</button>
+            <button type="submit" onclick="window.location.href='/auth/user'" class="UserButton">Users Only</button>
+            <button type="submit" onclick="window.location.href='/auth/admin'" class="AdminButton">Admin Only</button>
+            <button type="submit" onclick="window.location.href='/auth/protected'"class="protectedButton">User level dependant auto redirect</button>
         </div>
     </div>
 </body>
