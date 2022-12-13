@@ -187,9 +187,9 @@ nav.nav-bottom {
 
 td, th {
     border: thin solid black;
-    width: 50%;
-    padding: 25px;
-    }
+    width: 40%;
+    padding: 15px;
+}
 
 .AddJewel {
     color:black;
@@ -239,5 +239,11 @@ img {
     margin-left: 500px;
     border: 1px solid black;
     width: 30%;
+    text-align: center;
+}
+
+/* Association Page */
+
+.TopAssos {
     text-align: center;
 }

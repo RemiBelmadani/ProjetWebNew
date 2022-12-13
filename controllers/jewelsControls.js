@@ -3,7 +3,7 @@ const router = express.Router();
 const JewelRepo = require('../utils/repositoryJewels');
 router.get('/', JewelRootAction);
 router.get('/list', JewelListAction);
-//router.get('/Images', BraceletJewel);
+router.get('/Category/:Jewel_category', GetCategory);
 router.get('/show/:Jewel_ID', JewelShowAction);
 router.get('/del/:Jewel_ID', JewelDelAction);
 router.get('/edit/:Jewel_ID', JewelEditAction);
@@ -22,13 +22,12 @@ async function JewelListAction(request, response) {
     response.render("jewel_list", { "Jewels": Jewels, "flashMessage": flashMessage });
 }
 
-async function BraceletJewel(request, response) {
+async function GetCategory(request, response) {
     // response.send("LIST ACTION");
-    let Bracelet = await JewelRepo.getAllBracelets(); 
-    console.log(Bracelet);
+    let Cat = await JewelRepo.getOneCategory(request.params.Jewel_category); 
     var flashMessage = request.session.flashMessage;
     request.session.flashMessage = "";
-    response.render("Images", { "Bracelet": Bracelet, "flashMessage": flashMessage });
+    response.render("Category", { "Cat": Cat, "flashMessage": flashMessage });
 }
 
 

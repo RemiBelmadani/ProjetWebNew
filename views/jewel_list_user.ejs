@@ -9,12 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
-
-    <title>Document</title>
+    <title>Jewel List User</title>
 </head>
 <body>
-
-    
     <h1>List of Jewels</h1>
 <% if (flashMessage) { %>
     <p style='color:red'><%= flashMessage %></p>
@@ -70,8 +67,6 @@
             <th>Category</th>
             <th>Materials</th>
             <th>Show</th>
-            <th>Edit</th>
-            <th>Delete</th>
         </tr>
     
     <% for (var c of Jewels) { %>
@@ -83,8 +78,6 @@
             <td><%= c.Jewel_category %></td>
             <td><%= c.Jewel_material %></td>
             <td><a href='/Jewels/show/<%= c.Jewel_ID %>'>Show</a></td>
-            <td><a href='/Jewels/edit/<%= c.Jewel_ID %>'>Edit</a></td>
-            <td><a href='/Jewels/del/<%= c.Jewel_ID %>'>Delete</a></td>
         </tr>
     <% } %>
     </table>

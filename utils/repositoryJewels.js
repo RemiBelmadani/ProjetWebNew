@@ -28,19 +28,22 @@ module.exports = {
             throw err; // return false ???
         }
     },
-    async getAllBracelets(){ // TODO? move to brands.repository.js
+    async getOneCategory(Jewel_category){ 
         try {
             let conn = await pool.getConnection();
-            let sql = "SELECT * FROM Jewels WHERE Jewel_category = Bracelet";
-            console.log(sql);
-            const rows = await conn.query(sql);
+            let sql = "SELECT * FROM Jewels WHERE Jewel_category = '?'";
+            const rows = await conn.query(sql, Jewel_category);
             conn.end();
-            return rows;
+            console.log("ROWS FETCHED: "+rows.length);
+            if (rows.length == 1) {
+                return rows[0];
+            } else {
+                return false;
+            }
         }
         catch (err) {
-            // TODO: log/send error ... 
             console.log(err);
-            throw err; // return false ???
+            throw err; 
         }
     },
         async getOneCategory(Jewel_ID){ 
