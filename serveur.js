@@ -56,8 +56,6 @@ app.get('/bracelets', (request, response) => {
     response.render('bracelets.ejs')
 });
 
-// MIDDLEWARE REGISTRATIONS
-// app.use(callback1, callback2, callback3)
 const bodyParser = require("body-parser");
 app.use(bodyParser.json(), bodyParser.urlencoded({ extended: true }));
 
@@ -72,11 +70,9 @@ app.use(session({
 const auth = require("./utils/usersAuth");
 auth.initialization(app);
 
-// app.use(routeBase, callback);
 app.use("/static", express.static(__dirname + '/static'));
 app.use("/Jewels", require("./controllers/jewelsControls"));
 app.use("/Users", require("./controllers/usersControllers"));
-app.use("/Images", require("./controllers/jewelsControls"));
 app.use("/auth", require("./controllers/usersControllers"));
 app.use('/css', express.static(__dirname + 'public/css'));
 

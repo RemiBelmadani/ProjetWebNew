@@ -89,18 +89,18 @@ CREATE TABLE Orders (
  
 INSERT INTO Users VALUES
 
-(1,now(),'Rami','jose.rami@gmail.com','+33712345678','13 rue France','Client',sha2(concat(now(), 'Ramipass'), 224) ),
-(2,now(),'Christophe','robert.christophe@gmail.com','+33712345678','1 Avenue des Champs Elysées','Client',sha2(concat(now(), 'Christophepass'), 224) ),
-(3,now(),'Jean','jose.jean@gmail.com','+33712345678','19 Avenue des Champs Elysées','Client',sha2(concat(now(), 'Jeanpass'), 224) ),
-(4,now(),'Bob','Jose.bob@gmail.com','+33712345678','13 Rue Mozart','Client',sha2(concat(now(), 'Bobpass'), 224) ),
-(5,now(),'Wayne','bruce.wayne@gmail.com','+33712345678','17 Rue Mozart','Client',sha2(concat(now(), 'Waynepass'), 224) ),
-(6,now(),'Kent','clark.kent@gmail.com','+33712345678','13 rue France','Client',sha2(concat(now(), 'Kentpass'), 224) ),
-(7,now(),'Parker','peter.parker@gmail.com','+33712345678','35 rue de la Paix','Client',sha2(concat(now(), 'Parkerpass'), 224) ),
-(8,now(),'Stark','tony.stark@gmail.com','+33712345678','27 rue France','Client',sha2(concat(now(), 'Starkpass'), 224) ),
-(9,now(),'Goku','son.goku@gmail.com','+33712345678','18 rue de la Paix','Client',sha2(concat(now(), 'Gokupass'), 224) ),
-(10,now(),'Vegeta','vegeta@gmail.com','+33712345678','115 rue de la Liberté','Client',sha2(concat(now(), 'Vegetapass'), 224) ),
-(11,now(),'Bulma','bulma@gmail.com','+33712345678','23 Rue Mozart','Client',sha2(concat(now(), 'Bulmapass'), 224) ),
-(12,now(),'ADMIN','THEADMIN@gmail.com','+33712345678','No @','Admin',sha2(concat(now(), 'ADMINpass'), 224) );
+(1,now(),'Rami','jose.rami@gmail.com','+33712345678','13 rue France','Users',sha2(concat(now(), 'Ramipass'), 224) ),
+(2,now(),'Christophe','robert.christophe@gmail.com','+33712345678','1 Avenue des Champs Elysées','Users',sha2(concat(now(), 'Christophepass'), 224) ),
+(3,now(),'Jean','jose.jean@gmail.com','+33712345678','19 Avenue des Champs Elysées','Users',sha2(concat(now(), 'Jeanpass'), 224) ),
+(4,now(),'Bob','Jose.bob@gmail.com','+33712345678','13 Rue Mozart','Users',sha2(concat(now(), 'Bobpass'), 224) ),
+(5,now(),'Wayne','bruce.wayne@gmail.com','+33712345678','17 Rue Mozart','Users',sha2(concat(now(), 'Waynepass'), 224) ),
+(6,now(),'Kent','clark.kent@gmail.com','+33712345678','13 rue France','Users',sha2(concat(now(), 'Kentpass'), 224) ),
+(7,now(),'Parker','peter.parker@gmail.com','+33712345678','35 rue de la Paix','Users',sha2(concat(now(), 'Parkerpass'), 224) ),
+(8,now(),'Stark','tony.stark@gmail.com','+33712345678','27 rue France','Users',sha2(concat(now(), 'Starkpass'), 224) ),
+(9,now(),'Goku','son.goku@gmail.com','+33712345678','18 rue de la Paix','Users',sha2(concat(now(), 'Gokupass'), 224) ),
+(10,now(),'Vegeta','vegeta@gmail.com','+33712345678','115 rue de la Liberté','Users',sha2(concat(now(), 'Vegetapass'), 224) ),
+(11,now(),'Bulma','bulma@gmail.com','+33712345678','23 Rue Mozart','Users',sha2(concat(now(), 'Bulmapass'), 224) ),
+(12,now(),'ADMIN','THEADMIN@gmail.com','+33712345678','No @','ADMIN',sha2(concat(now(), 'ADMINpass'), 224) );
 
 
  INSERT INTO Orders VALUES

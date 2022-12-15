@@ -5,12 +5,12 @@ module.exports = {
   initialization(app) {
     app.use(passport.initialize());
     app.use(passport.session());
-    passport.serializeUser(function (Users, done) {
-      done(null, Users.Users_name);
+    passport.serializeUser(function (user, done) {
+      done(null, user.Users_name);
     });
     passport.deserializeUser(async function (Users_name, done) {
-      let User = await UsersRepo.getOneUser(Users_name);
-      done(null, Users);
+      let user = await UsersRepo.getOnename(Users_name);
+      done(null, user);
     });
   },
 
@@ -18,17 +18,16 @@ checkAuthentication(Users_role) {
     return function (request, response, next) {
       if (request.isAuthenticated()) {
         if (Users_role) {
-          if (Users_role === request.Users.Users_role) { 
+          if (Users_role === request.user.Users_role) { 
             return next();
           } else {
-            return response.end("401 Unautorized (bad user level)"); // TODO: Hierarchy
+            return response.end("401 Unautorized (bad user level)"); 
           }
-        } else { // No special role needed for page -> next middleware
+        } else { 
           return next();
         }
       } else {
         return response.end("401 Unautorized (not authenticated)");
-        // response.redirect("/auth"); // not authenticated at all
       }
     }
   }

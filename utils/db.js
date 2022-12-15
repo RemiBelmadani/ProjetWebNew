@@ -1,5 +1,3 @@
-// utils/db.js
-
 const mariadb = require("mariadb");
 
 const pool = mariadb.createPool({
