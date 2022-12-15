@@ -28,10 +28,6 @@ header img {
 }
 
 /* Page d'accueil */
-                                                     
-.landing-page {
-    padding: 20px 50px;
-}
 
 .big-title {
     color: white;
@@ -39,13 +35,6 @@ header img {
     font-family: "Abril FatFace";
     font-weight: 100;
     padding: 20px 50px;
-}
-
-.scroll-down {
-    color: white;
-    text-decoration: none;
-    position: absolute;
-    bottom: 120px;
 }
 
 /* Menu de navigation */
@@ -69,8 +58,8 @@ nav.nav li {
 footer {
     display: flex;
     position: relative;
-    align-items:center;
-    background-color: #74b3ce;
+    align-items: center;
+    background: linear-gradient(pink,rgb(109, 195, 203));
     width: 100%;
 }
 
@@ -91,10 +80,11 @@ nav.nav-bottom {
 .services {
     display: flex;
     width: 90%;
-    height: 100px;
+    height: 80px;
     justify-content: space-between;
     margin-left: 50px;
     position: absolute;
+    bottom: 1px;
 }
 
 /* Best-sellers */

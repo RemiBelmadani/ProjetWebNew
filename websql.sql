@@ -8,12 +8,12 @@ DROP TABLE if exists Jewels;
 CREATE TABLE Users ( 
 	Users_ID INT auto_increment primary key,
     Users_created datetime,
-	Users_name varchar(20) NOT NULL,
-	Users_mail varchar(50) NOT NULL,
-	Users_phone varchar(40) NOT NULL,
-	Users_address varchar(50) NOT NULL,
-    Users_role varchar(20) NOT NULL,
-	Users_passwords varchar(200) NOT NULL
+	Users_name varchar(20),
+	Users_mail varchar(50),
+	Users_phone varchar(40),
+	Users_address varchar(50),
+    Users_role varchar(20),
+	Users_passwords varchar(200)
 );
 
 CREATE TABLE Jewels (
